@@ -12,11 +12,11 @@ We release Python.Rundime.NetStandard.dll on Nuget for different Python versions
 ### Targeting Python 3.6
 * [Python.Rundime.NetStandard](https://www.nuget.org/packages/Python.Runtime.NETStandard/3.6.0) (Windows)
 * [Python.Rundime.Mono](https://www.nuget.org/packages/Python.Runtime.Mono/) (Linux) 
-* [Python.Rundime.OSX.dll](https://www.nuget.org/packages/Python.Runtime.OSX/3.6.0) (MacOS X)
+* [Python.Rundime.OSX](https://www.nuget.org/packages/Python.Runtime.OSX/3.6.0) (MacOS X)
 
 ### Targeting Python 3.7
-* [Python.Rundime.NetStandard.dll](https://www.nuget.org/packages/Python.Runtime.NETStandard/3.7.0) (Windows)
-* [Python.Rundime.OSX.dll](https://www.nuget.org/packages/Python.Runtime.OSX/3.7.0) (MacOS X)
+* [Python.Rundime.NetStandard](https://www.nuget.org/packages/Python.Runtime.NETStandard/3.7.0) (Windows)
+* [Python.Rundime.OSX](https://www.nuget.org/packages/Python.Runtime.OSX/3.7.0) (MacOS X)
 
 
 ## Projects using Python.Runtime.NetStandard
