@@ -1,4 +1,4 @@
-# pythonnet - Python for .NET Standard
+# pythonnet_netstandard - Python for .NET Standard
 
 This fork of the original [pythonnet/pythonnet](https://github.com/pythonnet/pythonnet) targets the portable .NET Standard instead of the .NET Framework. This readme contains only infos specific to pythonnet_netstandard. For the original documentation please check out their readme and wiki. 
 
