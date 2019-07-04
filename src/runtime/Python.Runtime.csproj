@@ -2,23 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Python.Runtime.NETStandard</AssemblyName>
-    <Version>3.7.0</Version>
+    <AssemblyName>Python.Runtime</AssemblyName>
+    <Version>3.7.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>http://pythonnet.github.io/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/henon/pythonnet_netstandard</PackageProjectUrl>
-    <Description>Python for .NET compiled against .Net Standard 2.0 and CPython 3.7
-</Description>
+    <Description>Pythonnet compiled against .NetStandard 2.0 and CPython 3.7 (win64)</Description>
     <Copyright>2019</Copyright>
     <Authors>Meinrad Recheis, Python for .NET Team</Authors>
-    <Company />
+    <Company></Company>
     <RepositoryUrl>https://github.com/henon/pythonnet_netstandard</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageTags>Python, pythonnet,</PackageTags>
+    <PackageId>Python.Runtime.NETStandard</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;PYTHON3;PYTHON37;UCS2</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;PYTHON3;PYTHON37;UCS2</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
@@ -28,16 +28,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\clr.py" />
-    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <None Remove="resources\clr.py"></None>
+    <Compile Remove="Properties\AssemblyInfo.cs"></Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="resources\clr.py" />
+    <EmbeddedResource Include="resources\clr.py"></EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0"></PackageReference>
   </ItemGroup>
 
 </Project>
