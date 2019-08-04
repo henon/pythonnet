@@ -13,7 +13,7 @@ namespace ReleaseBot
 {
     class Program
     {
-        private const int V = 1; // <--- pythonnet_netstandard version!
+        private const int V = 2; // <--- pythonnet_netstandard version!
         private const string ProjectPath = "../../../src/runtime";
         private const string ProjectName = "Python.Runtime.csproj";
         private const string Description = "Pythonnet compiled against .NetStandard 2.0 and CPython ";
@@ -21,8 +21,8 @@ namespace ReleaseBot
 
         static void Main(string[] args)
         {
-            var win_id = "Python.Runtime.NETStandard";
-            var linux_id = "Python.Runtime.Mono";
+            var win_id = "Python.Runtime.Windows";
+            var linux_id = "Python.Runtime.Linux";
             var osx_id = "Python.Runtime.OSX";
             var specs = new ReleaseSpec[]
             {
