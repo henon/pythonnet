@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Python.Runtime</AssemblyName>
-    <Version>3.7.1</Version>
+    <Version>3.7.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>http://pythonnet.github.io/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/henon/pythonnet_netstandard</PackageProjectUrl>
@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/henon/pythonnet_netstandard</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageTags>Python, pythonnet,</PackageTags>
-    <PackageId>Python.Runtime.NETStandard</PackageId>
+    <PackageId>Python.Runtime.Windows</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
