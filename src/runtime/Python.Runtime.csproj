@@ -5,21 +5,24 @@
     <AssemblyName>Python.Runtime</AssemblyName>
     <Version>3.7.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <PackageLicenseUrl>http://pythonnet.github.io/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/henon/pythonnet_netstandard</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/epignatelli/pythonnet_netstandard</PackageProjectUrl>
     <Description>Pythonnet compiled against .NetStandard 2.0 and CPython 3.7 (win64)</Description>
     <Copyright>2019</Copyright>
-    <Authors>Meinrad Recheis, Python for .NET Team</Authors>
-    <Company></Company>
-    <RepositoryUrl>https://github.com/henon/pythonnet_netstandard</RepositoryUrl>
+    <Authors>Eduardo Pignatelli</Authors>
+    <Company>bhom.xyz</Company>
+    <RepositoryUrl>https://github.com/epignatelli/pythonnet_netstandard</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageTags>Python, pythonnet,</PackageTags>
+    <PackageTags>Python, pythonnet</PackageTags>
     <PackageId>Python.Runtime.Windows</PackageId>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE;PYTHON3;PYTHON37;UCS2</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath>..\..\Build</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
