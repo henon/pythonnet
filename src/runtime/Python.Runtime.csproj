@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Python.Runtime</AssemblyName>
-    <Version>3.7.2</Version>
+    <Version>3.7.2-alpha</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <PackageLicenseUrl>http://pythonnet.github.io/LICENSE</PackageLicenseUrl>
@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/epignatelli/pythonnet_netstandard</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageTags>Python, pythonnet</PackageTags>
-    <PackageId>Python.Runtime.Windows</PackageId>
+    <PackageId>BH.UI.Python.Runtime</PackageId>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
