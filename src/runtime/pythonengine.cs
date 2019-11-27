@@ -228,6 +228,9 @@ namespace Python.Runtime
                         }
                         key.Dispose();
                     }
+
+                    // redirect stderr and stdout to Console.Out.Write
+                    PySysIO.RedirectToConsoleOut();
                 }
                 finally
                 {
