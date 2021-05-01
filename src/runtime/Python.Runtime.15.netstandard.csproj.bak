@@ -1,7 +1,7 @@
 <Project>
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <!--<TargetFrameworks>net40;netstandard2.0</TargetFrameworks>-->
     <Platforms>AnyCPU</Platforms>
     <Configurations>DebugMono;DebugMonoPY3;ReleaseMono;ReleaseMonoPY3;DebugWin;DebugWinPY3;ReleaseWin;ReleaseWinPY3</Configurations>
@@ -9,7 +9,7 @@
     <RootNamespace>Python.Runtime</RootNamespace>
     <AssemblyName>Python.Runtime</AssemblyName>
     <PackageId>pythonnet</PackageId>
-    <VersionPrefix>2.5.2</VersionPrefix>
+    <VersionPrefix>2.5.0</VersionPrefix>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Title>Python.NET</Title>
@@ -85,13 +85,13 @@
     <DefineConstants Condition="'$(CustomDefineConstants)' == ''">$(DefineConstants);PYTHON2;$(Python2Version);$(PythonWinDefineConstants)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'ReleaseWinPY3'">
-    <DefineConstants Condition="'$(CustomDefineConstants)' == ''">TRACE;XPLAT;;PYTHON3;PYTHON38;UCS2</DefineConstants>
+    <DefineConstants Condition="'$(CustomDefineConstants)' == ''">TRACE;XPLAT;;PYTHON3;PYTHON38;UCS2;NETSTANDARD</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugWin'">
     <DefineConstants Condition="'$(CustomDefineConstants)' == ''">$(DefineConstants);PYTHON2;$(Python2Version);$(PythonWinDefineConstants);FINALIZER_CHECK;TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugWinPY3'">
-    <DefineConstants Condition="'$(CustomDefineConstants)' == ''">TRACE;DEBUG;;FINALIZER_CHECK;XPLAT;;PYTHON3;PYTHON38;UCS2;NETSTANDARD</DefineConstants>
+    <DefineConstants Condition="'$(CustomDefineConstants)' == ''">TRACE;DEBUG;XPLAT;;PYTHON3;PYTHON38;UCS2;FINALIZER_CHECK;NETSTANDARD</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(PythonInteropFile)' != '' ">
