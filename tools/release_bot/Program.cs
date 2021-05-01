@@ -7,10 +7,10 @@ namespace release_bot
 {
     class Program
     {
-        private const string pythonnet_version = "2.5.1"; // <--- pythonnet version
+        private const string pythonnet_version = "2.5.2"; // <--- pythonnet version
 
 
-        private static int PackageVersion = 1; // NOTE: only if you need to fix a release increase > 0. reset to 0 if pythonnet version increases!
+        private static int PackageVersion = 0; // NOTE: only if you need to fix a release increase > 0. reset to 0 if pythonnet version increases!
         public static string V => PackageVersion == 0 ? pythonnet_version : $"{pythonnet_version}.{PackageVersion}";
 
         private const string Package = "pythonnet";
@@ -37,18 +37,21 @@ namespace release_bot
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.6 (linux)", PackageId = Package+"_py36_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS4;MONO_LINUX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.7 (linux)", PackageId = Package+"_py37_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS4;MONO_LINUX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.8 (linux)", PackageId = Package+"_py38_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS4;MONO_LINUX"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
+                new ReleaseSpec() { Version = V, Description = Description + net + "3.9 (linux)", PackageId = Package+"_py39_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS4;MONO_LINUX"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 // mac
                 new ReleaseSpec() { Version = V, Description = Description + net + "2.7 (osx)", PackageId = Package+"_py27_osx", PackageTags = Tags, Constants = "PYTHON2;PYTHON27;UCS2;MONO_OSX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.5 (osx)", PackageId = Package+"_py35_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON35;UCS2;MONO_OSX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.6 (osx)", PackageId = Package+"_py36_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS2;MONO_OSX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.7 (osx)", PackageId = Package+"_py37_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS2;MONO_OSX"+MALLOC+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40"},
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.8 (osx)", PackageId = Package+"_py38_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS2;MONO_OSX"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
+                new ReleaseSpec() { Version = V, Description = Description + net + "3.9 (osx)", PackageId = Package+"_py39_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS2;MONO_OSX"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 // win
                 new ReleaseSpec() { Version = V, Description = Description + net + "2.7 (win64)", PackageId = Package+"_py27_win", PackageTags = Tags, Constants = "PYTHON2;PYTHON27;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.5 (win64)", PackageId = Package+"_py35_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON35;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.6 (win64)", PackageId = Package+"_py36_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.7 (win64)", PackageId = Package+"_py37_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
                 new ReleaseSpec() { Version = V, Description = Description + net + "3.8 (win64)", PackageId = Package+"_py38_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
+                new ReleaseSpec() { Version = V, Description = Description + net + "3.9 (win64)", PackageId = Package+"_py39_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS2"+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectName, Framework="net40" },
 
                 // ====== .NET Standard 2.0 =======
                 // linux
@@ -57,18 +60,21 @@ namespace release_bot
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.6 (linux)", PackageId = PackageNetstd+"_py36_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS4;MONO_LINUX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.7 (linux)", PackageId = PackageNetstd+"_py37_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS4;MONO_LINUX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.8 (linux)", PackageId = PackageNetstd+"_py38_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS4;MONO_LINUX"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
+                new ReleaseSpec() { Version = V, Description = Description + netstd + "3.9 (linux)", PackageId = PackageNetstd+"_py39_linux", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS4;MONO_LINUX"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 // mac
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "2.7 (osx)", PackageId = PackageNetstd+"_py27_osx", PackageTags = Tags, Constants = "PYTHON2;PYTHON27;UCS2;MONO_OSX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.5 (osx)", PackageId = PackageNetstd+"_py35_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON35;UCS2;MONO_OSX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.6 (osx)", PackageId = PackageNetstd+"_py36_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS2;MONO_OSX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.7 (osx)", PackageId = PackageNetstd+"_py37_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS2;MONO_OSX"+MALLOC+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.8 (osx)", PackageId = PackageNetstd+"_py38_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS2;MONO_OSX"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
+                new ReleaseSpec() { Version = V, Description = Description + netstd + "3.9 (osx)", PackageId = PackageNetstd+"_py39_osx", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS2;MONO_OSX"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 // win
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "2.7 (win64)", PackageId = PackageNetstd+"_py27_win", PackageTags = Tags, Constants = "PYTHON2;PYTHON27;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.5 (win64)", PackageId = PackageNetstd+"_py35_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON35;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.6 (win64)", PackageId = PackageNetstd+"_py36_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON36;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.7 (win64)", PackageId = PackageNetstd+"_py37_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON37;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
                 new ReleaseSpec() { Version = V, Description = Description + netstd + "3.8 (win64)", PackageId = PackageNetstd+"_py38_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON38;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
+                new ReleaseSpec() { Version = V, Description = Description + netstd + "3.9 (win64)", PackageId = PackageNetstd+"_py39_win", PackageTags = Tags, Constants = "PYTHON3;PYTHON39;UCS2"+NETSTD+COMMON, RelativeProjectPath = ProjectPath, ProjectName = ProjectNameNetStandard, Framework="netstandard2.0" },
 
             };
             foreach (var platform in new[] {"x86", "x64"})
